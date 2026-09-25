@@ -3,6 +3,10 @@
 
 
 def pascal_triangle(n):
+    """Return a list of lists of integers representing Pascal's triangle of n.
+
+    Returns an empty list if n <= 0.
+    """
     if n <= 0:
         return []
 
@@ -14,4 +18,5 @@ def pascal_triangle(n):
             row.append(prev[j - 1] + prev[j])
         row.append(1)
         triangle.append(row)
+
     return triangle
